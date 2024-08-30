@@ -25,7 +25,7 @@ const schema = Yup.object().shape({
 })
 function Login({touched,errors,handleChange,handleBlur,handleSubmit}) {
     return (
-        <div className="bg-[url('./timepass.jpeg')] bg-cover flex justify-end h-screen">
+        <div className="bg-[url('/timepass.jpeg')] bg-cover flex justify-end h-screen">
             
             <div className="flex flex-col gap-4 px-12 py-8 self-center border-4 rounded-md border-black mr-48">
             <h1 className="self-center text-gray-600 text-3xl">DrugsInvo</h1>

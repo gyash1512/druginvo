@@ -6,19 +6,28 @@ import * as Yup from "yup";
 import Input from "./Input";
 import Button from "./FormButton";
 import axios from "axios";
-function sendData(values,props){
-    axios.post("https://myeasykart.codeyogi.io/login",{
+function sendData(values, props) {
+    axios
+      .post("http://localhost:5000/login", {
         email: values.email,
         password: values.password,
-    }).then((response) => {
-        const {user,token} = response.data;
-        localStorage.setItem("token",token);
-        props.props.setAlert({type:"success" ,message:"Welcome Back "+ user.full_name + "!"});
-
-    }).catch(()=>{
-        props.props.setAlert({type:"error",message:"Invalid email address or Password"})
-    })
-}
+      })
+      .then((response) => {
+        const { user, token } = response.data;
+        localStorage.setItem("token", token);
+        props.props.setAlert({
+          type: "success",
+          message: "Welcome Back " + user.full_name + "!",
+        });
+      })
+      .catch(() => {
+        props.props.setAlert({
+          type: "error",
+          message: "Invalid email address or Password",
+        });
+      });
+  }
+  
 const schema = Yup.object().shape({
     email : Yup.string().required("Please fill your email"),
     password : Yup.string().required("Please enter your password"),

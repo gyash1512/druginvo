@@ -7,7 +7,7 @@ import Input from "./Input";
 import Button from "./FormButton";
 import axios from "axios";
 function sendData(values, props) {
-      axios.post("https://druginvo.netlify.app/.netlify/functions/api", {
+      axios.post("https://druginvo.netlify.app/.netlify/functions/api/login", {
         email: values.email,
         password: values.password,
       })

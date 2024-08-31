@@ -2,6 +2,7 @@ import express from "express";
 import mysql from "mysql";
 import bodyParser from "body-parser";
 import cors from "cors";
+import serverless from "serverless-http";
 
 const app = express();
 app.use(bodyParser.json());
@@ -39,7 +40,4 @@ app.post("/login", (req, res) => {
   });
 });
 
-const port = 5000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+module.exports.handler = serverless(app);

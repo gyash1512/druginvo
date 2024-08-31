@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .home-section {
+    padding: 20px;
+  }
+  
+  .welcome-box, .why-choose-us-box, .benefits-box, .key-features-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light color background */
+    border-radius: 10px;
+  }
+  
+  .cards-container, .benefits-box div, .feature {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .card, .benefit {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .key-features-box .key-features-text, .key-features-image {
+    flex: 1;
+  }
+  
+  .key-features-box {
+    display: flex;
+  }
+  
+  .footer {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer ul a {
+    color: white;
+    text-decoration: none;
+  }
